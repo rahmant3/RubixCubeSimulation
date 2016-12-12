@@ -1,3 +1,13 @@
+//rahmant3
+//Requires Cube.java and Face.java
+//Simulates a 3D 3x3 Rubix Cube in Processing
+
+//Controls: 
+//Left click + mouse movement to change camera angle
+//Right click + mouse movement (up/down) to zoom camera
+//"F", "L", "B", "R", "U", "D" = turn front, left, back, right, top, or bottom face clockwise
+//Spacebar resets cube to solved state
+
 import peasy.*;
 
 PeasyCam p;

@@ -1,3 +1,6 @@
+//rahmant3
+//Requires Face.java class
+//Contains 6 face objects (which is 3x3 array containing 1 face of the cube) to simulate a rubix cube.
 
 public class Cube {
 	

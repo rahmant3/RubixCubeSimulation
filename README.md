@@ -18,20 +18,21 @@ How to Use:
 -Make sure peasycam library is added (can be added at Sketch -> Import Library -> Add Library)
 
 -Right-click + move mouse up/down for zoom
+
 -Left-click + move mouse to change perspective
 
 keyboard commands:
 
-F = turn front face CW
+'F' = turn front face CW
 
-L = turn left face CW
+'L' = turn left face CW
 
-B = turn back face CW
+'B' = turn back face CW
 
-R = turn right face CW
+'R' = turn right face CW
 
-U = turn top face CW
+'U' = turn top face CW
 
-D = turn bottom face CW
+'D' = turn bottom face CW
 
-R = reset to solved state
+' ' = reset to solved state

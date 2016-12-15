@@ -1,13 +1,13 @@
 //rahmant3
-//To be used with Cube.java
-//Contains a 3x3 array of tiles, representing one face of a cube.
+//To be used with Cube.java class
+//Face objects (a 3x3 array containing 1 face of the cube) to be used in order to simulate a rubix cube.
 
 public class Face {
 
 	char[][] tiles;
 	
 	public Face () {
-		tiles = new char[3][3];
+		tiles = new	char[3][3];
 	}
 	
 	public char[] getRow (int row) {

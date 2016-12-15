@@ -189,8 +189,6 @@ void keyPressed() {
       cube.rotateFace(face);
       moves.remove(index);
     }
-  }
-      
   
   if (key == ' ') {
     cube.reset();

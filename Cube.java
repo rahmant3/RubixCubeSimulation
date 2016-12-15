@@ -1,13 +1,13 @@
 //rahmant3
 //Requires Face.java class
-//Contains 6 face objects (which is 3x3 array containing 1 face of the cube) to simulate a rubix cube.
+//Contains 6 face objects (a 3x3 array containing 1 face of the cube) to simulate a rubix cube. 
 
 public class Cube {
 	
 	public static Face[] sides;
 	char[] colors = {'G', 'O', 'B', 'R', 'W', 'Y', 'Z', 'A', 'C'};
-	//char[] colors = {'0', '1', '2', '3', '4', '5'};
-	//Order of faces is as follows: front, left, back, right, top, bottom
+
+	//Order of faces is as follows: front (green), left (orange), back (blue), right (red), top (white), bottom (yellow)
 	
 	public Cube() {
 		sides = new Face[6];
@@ -21,7 +21,7 @@ public class Cube {
 		for (int k = 0; k < 6; k++) {
 			for (int i = 0; i < 3; i++) {
 				for (int j = 0; j < 3; j++) {
-					sides[k].tiles[i][j] = colors[k];//colors[(j)*3 + (i+1) - 1];
+					sides[k].tiles[i][j] = colors[k];
 				}
 			}
 		}

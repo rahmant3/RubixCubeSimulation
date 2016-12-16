@@ -34,37 +34,37 @@ public class Cube {
 		
 		//Adjust the other faces accordingly
 		if (pos == 0) { //front face
-			char[] temp = sides[4].getRow(2).clone();
+			char[] temp = (sides[4].getRow(2));
 			sides[4].setRow(2, reverseLine(sides[1].getCol(2)));
 			sides[1].setCol(2, sides[5].getRow(0));
 			sides[5].setRow(0, reverseLine(sides[3].getCol(0)));
 			sides[3].setCol(0,  temp);
 		} else if (pos == 1) { // left face
-			char[] temp = sides[4].getCol(0).clone();
+			char[] temp = (sides[4].getCol(0));
 			sides[4].setCol(0, reverseLine(sides[2].getCol(2)));
 			sides[2].setCol(2, reverseLine(sides[5].getCol(0)));
 			sides[5].setCol(0, sides[0].getCol(0));
 			sides[0].setCol(0, temp);
 		} else if (pos == 2) { //back face
-			char[] temp = sides[4].getRow(0).clone();
+			char[] temp = (sides[4].getRow(0));
 			sides[4].setRow(0, (sides[3].getCol(2)));
 			sides[3].setCol(2, reverseLine(sides[5].getRow(2)));
 			sides[5].setRow(2, (sides[1].getCol(0)));
 			sides[1].setCol(0, reverseLine(temp));
 		} else if (pos == 3) { //right face
-			char[] temp = sides[0].getCol(2).clone();
+			char[] temp = (sides[0].getCol(2));
 			sides[0].setCol(2, sides[5].getCol(2));
 			sides[5].setCol(2, reverseLine(sides[2].getCol(0)));
 			sides[2].setCol(0, reverseLine(sides[4].getCol(2)));
 			sides[4].setCol(2, (temp));
 		} else if (pos == 4) { //top
-			char[] temp = sides[0].getRow(0).clone();
+			char[] temp = (sides[0].getRow(0));
 			sides[0].setRow(0, sides[3].getRow(0));
 			sides[3].setRow(0, sides[2].getRow(0));
 			sides[2].setRow(0, sides[1].getRow(0));
 			sides[1].setRow(0, temp);
 		} else if (pos == 5) { //bottom
-			char[] temp = sides[0].getRow(2).clone();
+			char[] temp = (sides[0].getRow(2));
 			sides[0].setRow(2, sides[1].getRow(2));
 			sides[1].setRow(2, sides[2].getRow(2));
 			sides[2].setRow(2, sides[3].getRow(2));
@@ -124,5 +124,4 @@ public class Cube {
 		}
 		return result;
 	}
-	
 }

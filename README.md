@@ -1,9 +1,11 @@
 # RubixCubeSimulation
-3D Rubix Cube (3x3) made in Processing (Java-based): Try it [here!](https://www.openprocessing.org/sketch/395881)
+3D Rubix Cube (3x3) made in Processing (Java-based): 
 
--Just trying to learn how to use Processing.
+[Try it out!](https://www.openprocessing.org/sketch/395881)
+
 
 2016-12-16: More clean-up, UI uses arrow keys instead of mouse position. Included a help section.
+
 2016-12-14: Cleaned up code, improved the UI (doesn't require Peasy Cam anymore)
 
 ##Goals:

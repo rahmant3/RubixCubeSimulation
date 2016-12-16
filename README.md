@@ -3,7 +3,8 @@
 
 -Just trying to learn how to use Processing.
 
-2016-12-15: Cleaned up code, improved the UI (doesn't require Peasy Cam anymore)
+2016-12-16: More clean-up, UI uses arrow keys instead of mouse position. Included a help section.
+2016-12-14: Cleaned up code, improved the UI (doesn't require Peasy Cam anymore)
 
 ##Goals:
 

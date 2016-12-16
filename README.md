@@ -5,17 +5,18 @@
 
 2016-12-15: Cleaned up code, improved the UI (doesn't require Peasy Cam anymore)
 
-Goals:
+##Goals:
 
 -Make UI a little nicer/easier
 
 -Generalize to nxn cube
 
-How to Use:
+##How to Use:
+-Try it [here!](https://www.openprocessing.org/sketch/395881). Or,
 
--Open the source files in Processing and run (will look to put onto openprocessing.org so that this won't be necessary in the future)
+-Open the source files in Processing and press run.
 
-Controls:
+###Controls:
 -Up/Down arrows moves the cube about the central vertical axis
 
 -Left/Right arrows about the central horizontal axis
@@ -36,7 +37,7 @@ B for blue
 
 W for white
 
-Y fo yellow
+Y for yellow
 
 (The color of a face is the color of its center)
 

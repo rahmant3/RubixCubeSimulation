@@ -1,5 +1,5 @@
 # RubixCubeSimulation
-3D Rubix Cube (3x3) made in Processing (Java-based)
+3D Rubix Cube (3x3) made in Processing (Java-based): Try it [here!](https://www.openprocessing.org/sketch/395881)
 
 -Just trying to learn how to use Processing.
 

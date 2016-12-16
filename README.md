@@ -12,7 +12,7 @@
 -Generalize to nxn cube
 
 ##How to Use:
--Try it [here!](https://www.openprocessing.org/sketch/395881). Or,
+-Try it [here!](https://www.openprocessing.org/sketch/395881) Or,
 
 -Open the source files in Processing and press run.
 

@@ -11,7 +11,11 @@ public class Face {
 	}
 	
 	public char[] getRow (int row) {
-		return tiles[row];
+    char[] result = new char[3];
+    for (int i = 0; i < 3; i++) {
+      result[i] = tiles[row][i];
+    }
+		return result;
 	}
 	
 	public char[] getCol (int col) {
@@ -23,7 +27,14 @@ public class Face {
 	}
 	
 	public char[][] getFace () {
-		return tiles;
+    char[][] result = new char[3][3];
+    
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        result[i][j] = tiles[i][j];
+      }
+    }
+		return result;
 	}
 	
 	public void setFace (char[][] vals) {
@@ -35,14 +46,14 @@ public class Face {
 	}
 	
 	public void setRow (int row, char[] input) {
-		char[] vals = input.clone();
+		char[] vals = input;
 		for (int i = 0; i < vals.length; i++) {
 			tiles[row][i] = vals[i];
 		}
 	}
 	
 	public void setCol (int col, char[] input) {
-		char[] vals = input.clone();
+		char[] vals = input;
 		for (int i = 0; i < vals.length; i++) {
 			tiles[i][col] = vals[i];
 		}

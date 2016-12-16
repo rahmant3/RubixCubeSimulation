@@ -16,9 +16,9 @@ How to Use:
 -Open the source files in Processing and run (will look to put onto openprocessing.org so that this won't be necessary in the future)
 
 Controls:
--Mouse movement from side to side moves the cube about the central vertical axis
+-Up/Down arrows moves the cube about the central vertical axis
 
--Mouse movement above or below the middle half of the window moves the cube about the central horizontal axis
+-Left/Right arrows about the central horizontal axis
 
 -Shift+N randomizes the cube
 

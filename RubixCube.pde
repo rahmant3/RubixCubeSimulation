@@ -8,14 +8,18 @@ Cube cube;
 float xOffset;
 float yOffset;
 float yChange;
+float xChange;
 
 ArrayList<Integer> moves;
+int maxMoves = 254;
 
 String welcome = "Welcome to the Rubix Cube simulation!\n\nThe controls are as follows: \n" +
-"-Mouse movement from side to side moves the cube about the central vertical axis\n" +
-"-Mouse movement above or below the middle half of this window moves the cube about the \n" +
-"central horizontal axis\n" +
-"-Shift+N randomizes the cube\n" + 
+//"-Mouse movement from side to side moves the cube about the central vertical axis\n" +
+"-Left/Right arrow keys moves the cube about the central vertical axis\n" +
+//"-Mouse movement above or below the middle half of this window moves the cube about the \n" +
+//"central horizontal axis (keeping your mouse in the middle half of the window means the cube won't move \n" +
+"-Up/Down arrow keys moves the cube about the central horizontal axis\n" +
+"-Capital N randomizes the cube\n" + 
 "-Space Bar resets cube to solved\n" + 
 "-Press the letter corresponding to the color of the face to turn that face CLOCKWISE, e.g.:\n\n" +
 "G for green\n" +
@@ -39,6 +43,7 @@ void setup() {
   tileLen = 75;
   xOffset = 0;
   yOffset = 0;
+  xOffset = 0;
   
   moves = new ArrayList<Integer>();
   showText = false;
@@ -60,19 +65,26 @@ void draw() {
     textSize(12);
     text("Press H for help!", 20, 20);
     
+    xOffset += xChange;
     
-    xOffset = map(mouseX, 0, width, -2*PI, 2*PI);
-    yChange = map(mouseY, 0, height, 0.1, -0.1);
-    
-    if (yChange < 0.05 && yChange > -0.05) {
-      yChange = 0;
-    } else {
-      if (mouseY < height/2) {
-        yChange = map(mouseY, 0, height*0.25, 0.1, 0);
-      } else {
-        yChange = map(mouseY, height*0.75, height, 0, -0.1);
-      }
+    if (xOffset > 2*PI) {
+      xOffset -= 2*PI;
+    } else if (xOffset < -2*PI) {
+      xOffset += 2*PI;
     }
+    
+    //xOffset = map(mouseX, 0, width, -2*PI, 2*PI);
+    //yChange = map(mouseY, 0, height, 0.1, -0.1);
+    
+    //if (yChange < 0.05 && yChange > -0.05) {
+    //  yChange = 0;
+    //} else {
+    //  if (mouseY < height/2) {
+    //    yChange = map(mouseY, 0, height*0.25, 0.1, 0);
+    //  } else {
+    //    yChange = map(mouseY, height*0.75, height, 0, -0.1);
+    //  }
+    //}
     
     
     if (abs(xOffset) > PI/2 && abs(xOffset) < 1.5*PI) {
@@ -189,7 +201,7 @@ void keyPressed() {
       cube.rotateFace(face);
       moves.remove(index);
     }
-  
+  }
   if (key == ' ') {
     cube.reset();
     moves = new ArrayList<Integer>();
@@ -201,7 +213,29 @@ void keyPressed() {
   if (key == 'H' || key == 'h') {
     showText = !showText;
   } 
+  if (key == CODED) {
+    if (keyCode == UP) {
+      yChange = 0.1;
+    } else if (keyCode == DOWN) {
+      yChange = -0.1;
+    } else if (keyCode == RIGHT) {
+      xChange = 0.1;
+    } else if (keyCode == LEFT) {
+      xChange = -0.1;
+    }
+  }
 }
+
+void keyReleased() {
+  if (key == CODED) {
+    if (keyCode == UP || keyCode == DOWN) {
+      yChange = 0;
+    } else if (keyCode == RIGHT || keyCode == LEFT) {
+      xChange = 0;
+    }
+  }
+}
+  
 
 void randomize() {
   for (int i = 0; i < 60; i++) {

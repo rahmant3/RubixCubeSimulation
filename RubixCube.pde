@@ -21,7 +21,8 @@ String welcome = "Welcome to the Rubix Cube simulation!\n\nThe controls are as f
 "-Up/Down arrow keys moves the cube about the central horizontal axis\n" +
 "-Capital N randomizes the cube\n" + 
 "-Space Bar resets cube to solved\n" + 
-"-Press the letter corresponding to the color of the face to turn that face CLOCKWISE, e.g.:\n\n" +
+"-Press the letter corresponding to the color of the face to turn that face\n" +
+"CLOCKWISE, e.g.:\n\n" +
 "G for green\n" +
 "O for orange\n" +
 "R for red\n" +
@@ -31,7 +32,7 @@ String welcome = "Welcome to the Rubix Cube simulation!\n\nThe controls are as f
 "(The color of a face is the color of its center)\n\n" +
 "-Press U to undo a move\n" +
 "-Press H to hide this and show the cube!" +
-"\n\n\n\n\n\n\nThis program is written in Processing (Java)";
+"\n\n\n\n\n\nThis program is written in Processing (Java)";
 
 boolean showText;
 
@@ -58,7 +59,7 @@ void draw() {
   
   if (showText) {
     fill(255);
-    textSize(12);
+    textSize(14);
     text(welcome, 50, 50);
   } else {
     fill(255);

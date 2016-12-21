@@ -1,6 +1,14 @@
-//rahmant3
-//Requires Cube.java and Face.java
-//Simulates a 3D 3x3 Rubix Cube in Processing
+/** rahmant3
+ * Requires Cube.java and Face.java
+ * Simulates a 3D 3x3 Rubix Cube in Processing
+ *
+ * Controls are: 
+ * Up/Down/Left/Right arrows to move the view of the cube.
+ * G(reen)/O(range)/B(lue)/R(ed)/W(hite)/Y(ellow) to turn that face CLOCKWISE
+ * N to randomize the cube
+ * Space to restart to solved position
+ * U to undo a move
+ */
 
 float tileLen;
 Cube cube;
@@ -13,6 +21,7 @@ float xChange;
 ArrayList<Integer> moves;
 int maxMoves = 254;
 
+boolean showText;
 String welcome = "Welcome to the Rubix Cube simulation!\n\nThe controls are as follows: \n" +
 //"-Mouse movement from side to side moves the cube about the central vertical axis\n" +
 "-Left/Right arrow keys moves the cube about the central vertical axis\n" +
@@ -28,13 +37,11 @@ String welcome = "Welcome to the Rubix Cube simulation!\n\nThe controls are as f
 "R for red\n" +
 "B for blue\n" +
 "W for white\n" +
-"Y fo yellow\n" +
+"Y for yellow\n" +
 "(The color of a face is the color of its center)\n\n" +
 "-Press U to undo a move\n" +
 "-Press H to hide this and show the cube!" +
 "\n\n\n\n\n\nThis program is written in Processing (Java)";
-
-boolean showText;
 
 void setup() {
   size(600, 600, P3D);
@@ -107,7 +114,8 @@ void drawCube() {
   for (int i = 0; i < 6; i++) {
     for (int j = 0; j < 3; j++) {
       for (int k = 0; k < 3; k++) {
-        char tile = cube.sides[i].tiles[j][k]; 
+        //char tile = cube.sides[i].tiles[j][k];
+        char tile = cube.getTile(i, j, k);
         int colour = 0;
         if (tile == 'R') {
           colour = 0;
@@ -168,6 +176,10 @@ void makeTile(float xS, float yS, float zS, float xE, float yE, float zE, int co
 }
 
 void keyPressed() {
+  if (moves.size() > maxMoves) {
+    moves.remove(0);
+  }
+  
   if (key == 'G' || key == 'g') {
     cube.rotateFace(0);
     moves.add(0);
@@ -237,7 +249,6 @@ void keyReleased() {
   }
 }
   
-
 void randomize() {
   for (int i = 0; i < 60; i++) {
     double r = Math.random();

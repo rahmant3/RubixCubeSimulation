@@ -4,7 +4,7 @@
 [Demo](https://www.openprocessing.org/sketch/395881)
 
 
-2016-12-20: Removed mutability of objects in both the Face class and Cube class.
+2016-12-20: Reduced mutability of objects from the Face class and Cube class.
 
 2016-12-16: More clean-up, UI uses arrow keys instead of mouse position. Included a help section.
 

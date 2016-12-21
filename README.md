@@ -1,8 +1,10 @@
 # RubixCubeSimulation
 3D Rubix Cube (3x3) made in Processing (Java-based): 
 
-[Try it out!](https://www.openprocessing.org/sketch/395881)
+[Demo](https://www.openprocessing.org/sketch/395881)
 
+
+2016-12-20: Removed mutability of objects in both the Face class and Cube class.
 
 2016-12-16: More clean-up, UI uses arrow keys instead of mouse position. Included a help section.
 
@@ -15,7 +17,7 @@
 -Generalize to nxn cube
 
 ##How to Use:
--Try it [here!](https://www.openprocessing.org/sketch/395881) Or,
+-Try it [here.](https://www.openprocessing.org/sketch/395881) Or,
 
 -Open the source files in Processing and press run.
 

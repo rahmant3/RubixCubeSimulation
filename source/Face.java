@@ -1,10 +1,14 @@
-/** rahmant3
- * To be used with Cube.java class
- *
- * Face objects (a 3x3 array containing 1 face of the cube) to be used in order to simulate a rubix cube.
- * Contains getters and setters in order to get a row, column, or tile, allowing Cube.java to manipulate
- * the faces to simulate a cube.
- */
+/*
+rahmant3
+   
+  github: https://github.com/rahmant3/LOOP
+   
+  To be used with Cube.java class
+   
+  Face objects (a 3x3 array containing 1 face of the cube) to be used in order to simulate a rubix cube.
+  Contains getters and setters in order to get a row, column, or tile, allowing Cube.java to manipulate
+  the faces to simulate a cube.
+*/
  
 public class Face {
 
